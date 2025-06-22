@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/src/style.css">
+    <script type="module" src="/src/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="form-card">
+      <h1>Make a Review</h1>
+    <form id="form">
+      <div class="form-group">
+        <label for="name">Username</label>
+        <input name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="game">Game Title</label>
+        <input name="game" required>
+      </div>
+      <div class="form-group">
+        <label for="review">Review</label>
+        <textarea name="review" ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="rating">Rating</label>
+        <input name="rating" type="range" step="0.1" min="0" max="10" class="rating-input" id="slider" required/>
+      </div>
+      <div class="form-group grid-start">
+        <p class="ratingDisplay" id="ratingValue">5</p>
+      </div>
+        <button class="submit" type="submit">submit</button>
+    </form>
+    </div>
+    <div class="reviewContainer" id="app"></div>
+    <dialog class="modal" id="modal">
+    <h2>Thank you!</h2>
+    <button id="closeModal" class="closeModal">X</button>
+    <div>
+        <p>Your review has posted successfully</p>
+    </div>
+  </dialog>
+  <dialog class="modal" id="errorModal">
+    <h2>Error</h2>
+    <button id="closeError" class="closeModal">X</button>
+    <div>
+        <p>Form failed to submit. Please ensure all fields are filled out correctly.</p>
+    </div>
+  </dialog>
+  <!-- <button class="like"></button> -->
+  </body>
+  
+</html>
