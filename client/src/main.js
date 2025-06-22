@@ -1,15 +1,17 @@
 const app = document.getElementById('app')
 
+const BASE_URL = `https://game-reviews-server.onrender.com`
+
 // function to fetch data
 async function fetchReviews() {
-  const res = await fetch(`http://localhost:8080/gameReviews`)
+  const res = await fetch(`${BASE_URL}/gameReviews`)
   const reviews = await res.json()
   return reviews
 }
 
 // function top get likes of an id
 async function fetchLikes(id) {   
-  const res = await fetch(`http://localhost:8080/likes?id=${id}`)
+  const res = await fetch(`${BASE_URL}/likes?id=${id}`)
   const likes = await res.json()
   return likes
 }
@@ -85,7 +87,7 @@ displayReviews()
 // update likes function
 async function updateLikes(likes) {
   try {
-    const res = await fetch('http://localhost:8080/likes', {
+    const res = await fetch(`${BASE_URL}/likes`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -123,7 +125,7 @@ form.addEventListener('submit', async (event) => {
 
   // send data via post
   try {
-    const res = await fetch('http://localhost:8080/gameReviews', {
+    const res = await fetch(`${BASE_URL}/gameReviews`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
