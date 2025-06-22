@@ -270,7 +270,6 @@ input {
 }
 
 .like{
-  background-image: url('../images/white-heart.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -290,5 +289,13 @@ input {
 }
 
 .like:hover {
+  background-image: url('../images/red-heart.png');
+}
+
+.white{
+  background-image: url('../images/white-heart.png');
+}
+
+.red{
   background-image: url('../images/red-heart.png');
 }

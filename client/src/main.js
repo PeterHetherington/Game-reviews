@@ -1,6 +1,8 @@
 const app = document.getElementById('app')
 
-const BASE_URL = `https://game-reviews-server.onrender.com`
+const live = `https://game-reviews-server.onrender.com`
+const test = `http://localhost:8080`
+const BASE_URL = live
 
 // function to fetch data
 async function fetchReviews() {
@@ -42,7 +44,7 @@ async function displayReviews() {
     
     // create like button
     const btn = document.createElement('button')
-    btn.className = 'like'
+    btn.className = 'like white'
     btn.value = `${review.id}`
     // btn.innerHTML = `<input name="id" value=${review.id} type="hidden">`
 
@@ -55,14 +57,16 @@ async function displayReviews() {
       const likes = await fetchLikes(id)
       // console.log(likes[0].likes)
       if (likeStatus == false){
-        btn.style.backgroundImage = `url('../images/red-heart.png')`;
+        // btn.style.backgroundImage = `url('../images/red-heart.png')`;
+        btn.className = 'like red'
         likeStatus = true
         // update likes
         likes[0].likes += 1
         // TODO send updated likeValue to server
         updateLikes(likes[0])
       } else if (likeStatus == true){
-          btn.style.backgroundImage = `url('../images/white-heart.png')`;
+          // btn.style.backgroundImage = `url('../images/white-heart.png')`;
+          btn.className = 'like white'
           likeStatus = false
           // update likes
           likes[0].likes -= 1
