@@ -62,7 +62,6 @@ async function displayReviews() {
         likeStatus = true
         // update likes
         likes[0].likes += 1
-        // TODO send updated likeValue to server
         updateLikes(likes[0])
       } else if (likeStatus == true){
           // btn.style.backgroundImage = `url('../images/white-heart.png')`;
@@ -70,7 +69,6 @@ async function displayReviews() {
           likeStatus = false
           // update likes
           likes[0].likes -= 1
-          // TODO send updated likeValue to server
           updateLikes(likes[0])
       } 
       

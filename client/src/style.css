@@ -3,14 +3,9 @@
   padding: 0;
 }
 
-input,
-label,
-button{
-  font: inherit;
-}
-
 body{
   background-image:linear-gradient(to right, #1b2838, #2a475e );
+  font-family: roboto;
   /* background-image: linear-gradient(blue, green); */
 }
 
@@ -41,10 +36,6 @@ form{
   font-size: 4rem;
   padding: 10px;
   grid-column: span 2;
-}
-
-.form-card>label{
-  font-weight: 10px;
 }
 
 .span-2 {
@@ -107,6 +98,7 @@ input {
   font-size: 3rem;
   border-radius: 60px;
   padding: 20px;
+  font-family: initial;
 
    @media (width > 800px){
     width: 11rem;
@@ -157,6 +149,7 @@ input {
   font-size: 2rem;
   border-radius: 10px;
   padding: 10px;
+  font-family: initial;
 
   @media (width < 800px){
     position: initial;
@@ -190,6 +183,7 @@ input {
 .reviewer {
   color: gray;
   padding-left: 10px;
+  font-family: initial;
   @media (width < 800px){
     align-self: center;
     justify-self: center;
@@ -298,4 +292,20 @@ input {
 
 .red{
   background-image: url('../images/red-heart.png');
+}
+
+.submit{
+  background-color: #2a475e;
+  color: white;
+  border-radius: 10px;
+  border: transparent;
+  height: 2rem;
+  font-size: 1.05rem;
+}
+
+.submit:hover {
+  /* background-color: #2a475e;
+  color: white; */
+  background-color: white;
+  color: initial;
 }

@@ -14,3 +14,7 @@ Resources used:
  - https://www.postgresql.org/docs/current/datatype-numeric.html#DATATYPE-INT
  - https://stackoverflow.com/questions/6912584/how-to-get-get-query-string-variables-in-express-js-on-node-js
  - https://www.prisma.io/dataguide/postgresql/inserting-and-modifying-data/updating-existing-data
+
+ Issues:
+ - form validation is weak, ideally I would have made sure users could only review games from a populated game database to avoid spelling mistakes for easier filtering. I would have also liked to implement a login/account creation to discourage fake/problematic reviews or names.
+ - Given more time I would have liked to implement filters to allow users to search for reviews by game titles 
